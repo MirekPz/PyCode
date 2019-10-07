@@ -1,0 +1,5 @@
+print()
+print("Trókąt:")
+print("  * ")
+print(" ***")
+print("*****")
