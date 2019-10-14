@@ -1,0 +1,6 @@
+git init
+git add nazwa_pliku
+git commit -m "komentarz"
+git pull
+git push
+git status
