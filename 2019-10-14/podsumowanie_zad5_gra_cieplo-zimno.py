@@ -10,7 +10,7 @@ Stwórz grę ciepło zimno.
 import random
 
 number_drawn = random.randrange(1, 101)
-print(number_drawn)
+#print(number_drawn)
 
 counter = 0
 while counter < 6:
@@ -23,9 +23,9 @@ while counter < 6:
         print("\nLiczba za duża.")
         if counter == 6:
             print("\nLiczba prób została wyczerpana!")
+            print("\nUWAGA: wylosowano liczbę: ", number_drawn)
     else:
         print("\nLiczba za mała.")
         if counter == 6:
             print("\nLiczba prób została wyczerpana!")
-
-print("\nUWAGA: wylosowano liczbę: ", number_drawn)
+            print("\nUWAGA: wylosowano liczbę: ", number_drawn)
