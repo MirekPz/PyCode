@@ -8,6 +8,8 @@
         Zmień tak, by gracz mógł zakończyć grę w dowolnej chwili przez np. hasło ‘koniec’
 """
 
+import random
+
 # 1. Użytkownik podaje jedną z 3 figur do gry: [K]amień, [P]apier, [N]ożyce
 user_figure = " "
 while True:
@@ -25,3 +27,14 @@ while True:
         print("Niepoprawny wybór figury!")
 
 # 2. Komputer losuje jedną z 3 figur
+drawn_figure = random.choice("KPN")
+if drawn_figure == "K":
+    print("Komputer wylosował: KAMIEŃ")
+elif drawn_figure == "P":
+    print("Komputer wylosował: PAPIER")
+else:
+    print("Komputer wylosował: NOŻYCE.")
+
+# 3. Sprawdzamy kto wygrał tę rundę
+
+
