@@ -36,5 +36,5 @@ else:
     print("Komputer wylosował: NOŻYCE.")
 
 # 3. Sprawdzamy kto wygrał tę rundę
-
-
+if user_figure == drawn_figure:
+    print("\t*** Remis ***")
