@@ -13,6 +13,9 @@ import random
 game_round = int(input("Ile rund chcesz rozegrać: "))
 
 counter = 0
+number_of_rounds_won_by_computer = 0
+number_of_rounds_won_by_the_user = 0
+
 while counter < game_round:
     counter += 1
 
@@ -49,14 +52,25 @@ while counter < game_round:
     else:
         if user_figure == "P" and drawn_figure == "K":   # papier owija kamień, wygrywa P
             winner = "Użytkownik"
+            number_of_rounds_won_by_the_user += 1
         elif user_figure == "P" and drawn_figure == "N":   # nożyce tną papier, wygrywają N
             winner = "Komputer"
+            number_of_rounds_won_by_computer += 1
         elif user_figure == "K" and drawn_figure == "N":   # kamień tępi nożyce, wygrywa K
             winner = "Użytkownik"
+            number_of_rounds_won_by_the_user += 1
         elif user_figure == "K" and drawn_figure == "P":
             winner = "Komputer"
+            number_of_rounds_won_by_computer += 1
         elif user_figure == "N" and drawn_figure == "K":
             winner = "Komputer"
+            number_of_rounds_won_by_computer += 1
         elif user_figure == "N" and drawn_figure == "P":
-            winner == "Użytkownik"
-        print("Wygrał:", winner)
+            winner = "Użytkownik"
+            number_of_rounds_won_by_the_user += 1
+        print("Rundę {} wygrał:".format(counter), winner)
+
+print("\nŁączna liczba wygranych rund:")
+print("- użytkownik: {}".format(number_of_rounds_won_by_the_user))
+print("- komputer: {}".format(number_of_rounds_won_by_computer))
+
