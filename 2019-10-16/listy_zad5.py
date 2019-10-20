@@ -15,6 +15,6 @@ tablica = [
     ["Krystyna", "Janda", "aktorka"]
 ]
 for i in range(4):
-    print("\n")
     for j in range(3):
         print(tablica[i][j], end=" ")
+    print()
