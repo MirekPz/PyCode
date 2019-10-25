@@ -13,15 +13,18 @@
     aby zobaczyć, czy program również zmienia swoje zachowanie.
 """
 
+import datetime
+
 cars = {
         'marka': 'Fiat',
         'model': 'Seicento',
         'rocznik': 1999
         }
 
+print()
 print(cars)
 
-car_age = 2019 - cars['rocznik']
+car_age = datetime.date.today().year - cars['rocznik']
 
 if car_age >= 25:
     print(f"Gratulacje! Twój samochód {cars['marka'] + ' ' + cars['model']} może być zarejestrowany jako zabytek.")
