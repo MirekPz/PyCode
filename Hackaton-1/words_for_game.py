@@ -28,22 +28,54 @@ with open("fruit_from_website.txt", "r") as fruit_file:
         line = line[: -len(final_tag)]
         fruit.append(line)
 
-drawn_word = random.choice(fruit)
+drawn_word = random.choice(fruit).upper()
 sign_numbers = len(drawn_word)
 
 print()
 print("THE HANGMAN GAME")
 print()
-print(f"The name of fruit consists of {sign_numbers} letters (can be space or dash too inside).")
-print("Guess it!")
+print(f"The name of fruit consists of {sign_numbers} letters (can be space or dash inside too).")
 print("_ " * sign_numbers)
 print()
+print("Guess it!")
+print()
 print("Your turn now... You can guess only one letter or whole word: ")
-letter = input().upper()
-print(letter)
-if not letter.isalpha() or letter == "-" or letter == " ":
-    print("Incorrect sign in word! Try again.")
+
+is_not_guessed_word = True
+letter = ""
+guessed_word = ""
+i = 0
+
+print(fruit)
+
+while is_not_guessed_word:
+
+    letter = input(' ===> ').upper()
+    print("letter ............>  ", letter)
+
+    if not letter.isalpha() and not letter == "-" and not letter == " ":
+        print("Incorrect sign in word! Try again.")
+        print(guessed_word + " _" * (sign_numbers - len(guessed_word)))
+        continue
+
+    print(letter)
+    print(drawn_word)
+    if letter == drawn_word.upper():   # odgadnięte całe słowo
+        print(letter)
+        guessed_word = letter
+        print("Bingo!")
+        break
+
+    if letter == drawn_word[i].upper():
+        guessed_word = guessed_word + letter
+        print(guessed_word + " _" * (sign_numbers - len(guessed_word)))
+        i = i + 1
+        if i == sign_numbers:
+            print("Bingo!")
+            break
+    else:
+        print("Wrong letter!")
+        print(guessed_word + " _" * (sign_numbers - len(guessed_word)))
 
 
-print("\nMy prompt: ", drawn_word, sign_numbers)
-
+print("\nMy temporary prompt: ", drawn_word, sign_numbers)
