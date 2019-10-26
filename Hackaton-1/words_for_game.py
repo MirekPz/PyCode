@@ -42,15 +42,14 @@ print()
 for element in fruit:
     print(element, end='   ')
 
-print("\n")
+print("\n\n")
 print("START")
+print()
 print(f"The name of fruit consists of {sign_numbers} letters (can be space or dash inside too).")
 print("_ " * sign_numbers)
 print()
 print("Guess it!")
 print()
-
-
 
 is_not_guessed_word = True
 letter = ""
@@ -60,6 +59,7 @@ attempt = 10
 
 while is_not_guessed_word:
 
+    print()
     letter = input(' ===> ').upper()
 
     if not letter.isalpha() and not letter == "-" and not letter == " ":
@@ -68,7 +68,7 @@ while is_not_guessed_word:
         continue
 
     print(letter)
-    print(drawn_word)
+    print("\t\t\t" + drawn_word)
     if letter == drawn_word.upper():   # odgadnięte całe słowo
         print(letter)
         guessed_word = letter
@@ -86,5 +86,4 @@ while is_not_guessed_word:
         print("Wrong letter!")
         print(guessed_word + " _" * (sign_numbers - len(guessed_word)))
 
-
-print("\nMy temporary prompt: ", drawn_word, sign_numbers)
+input("\nPress any key when ready...")
