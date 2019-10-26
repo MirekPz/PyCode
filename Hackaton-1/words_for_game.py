@@ -32,26 +32,35 @@ drawn_word = random.choice(fruit).upper()
 sign_numbers = len(drawn_word)
 
 print()
-print("THE HANGMAN GAME")
+print('\t'*3 + '*' * (12 + len("THE HANGMAN GAME")))
+print("\t"*3 + "*     THE HANGMAN GAME     *")
+print('\t'*3 + '*' * (12 + len("THE HANGMAN GAME")))
 print()
+print("You can guess only one letter or whole word from the following list: ")
+
+print()
+for element in fruit:
+    print(element, end='   ')
+
+print("\n")
+print("START")
 print(f"The name of fruit consists of {sign_numbers} letters (can be space or dash inside too).")
 print("_ " * sign_numbers)
 print()
 print("Guess it!")
 print()
-print("Your turn now... You can guess only one letter or whole word: ")
+
+
 
 is_not_guessed_word = True
 letter = ""
 guessed_word = ""
 i = 0
-
-print(fruit)
+attempt = 10
 
 while is_not_guessed_word:
 
     letter = input(' ===> ').upper()
-    print("letter ............>  ", letter)
 
     if not letter.isalpha() and not letter == "-" and not letter == " ":
         print("Incorrect sign in word! Try again.")
