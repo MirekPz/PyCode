@@ -55,7 +55,6 @@ is_not_guessed_word = True
 letter = ""
 guessed_word = ""
 i = 0
-attempt = 10
 
 while is_not_guessed_word:
 
@@ -72,7 +71,7 @@ while is_not_guessed_word:
     if letter == drawn_word.upper():   # odgadnięte całe słowo
         print(letter)
         guessed_word = letter
-        print("Bingo!")
+        print("\nBingo!")
         break
 
     if letter == drawn_word[i].upper():
@@ -80,7 +79,7 @@ while is_not_guessed_word:
         print(guessed_word + " _" * (sign_numbers - len(guessed_word)))
         i = i + 1
         if i == sign_numbers:
-            print("Bingo!")
+            print("\nBingo!")
             break
     else:
         print("Wrong letter!")
