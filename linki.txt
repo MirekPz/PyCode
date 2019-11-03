@@ -1,1 +1,3 @@
-https://codeme.netlify.com
+https://codeme.netlify.com/
+
+github.com/ritaly/pycode
