@@ -74,16 +74,7 @@ while is_not_guessed_word:
         print("\nBingo!")
         break
 
-    if letter in drawn_word.upper():
-        liczba_wystapien_wpisanej_litery_w_wylosowanym_slowie = drawn_word.count(letter)
-        print("Liczba wystąpień wpisanej litery: ", drawn_word.count(letter))  # ile razy wpisana litera występuje w wylosowanym ciągu
-        # tyle razy zastosować index(), jaką wartość ma funkcja count()
-        print('@@@@@@@@@@')
-        pozycja = 0 # zainicjowanie zmiennej
-        for n in range(liczba_wystapien_wpisanej_litery_w_wylosowanym_slowie):
-            pozycja = drawn_word[pozycja:].index(letter)   ## --------------------------%%%%%%%%%
-            print(pozycja)
-        # na jakiej pozycji są znalezione litery i podmienić je zamiast kresek !!!!!!!!!!!!!!!!!!!!!*********
+    if letter == drawn_word[i].upper():
         guessed_word = guessed_word + letter
         print(guessed_word + " _" * (sign_numbers - len(guessed_word)))
         i = i + 1
