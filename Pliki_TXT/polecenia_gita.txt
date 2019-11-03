@@ -1,0 +1,32 @@
+Wylistowanie zawartości GitHuba: 
+
+git init
+
+git ls-files
+
+=======================================
+
+Zmiana nazwy folderu na GitHubie:
+
+git init
+
+git mv old_folder_name new_folder_name
+
+git commit -m "Komentarz"
+
+git push
+
+========================================
+
+Usunięcie całego folderu z GitHuba:
+
+git init
+
+git rm -r folder_name
+
+git commit -m "Komentarz"
+
+git push
+
+========================================
+

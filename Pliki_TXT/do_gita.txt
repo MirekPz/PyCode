@@ -1,0 +1,9 @@
+Wysyłanie plików na Githuba:
+
+git init
+git add nazwa_pliku
+git commit -m "komentarz"
+git push
+
+git status
+
