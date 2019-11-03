@@ -4,12 +4,6 @@ git init
 git add nazwa_pliku
 git commit -m "komentarz"
 git push
+
 git status
-
-=============
-
-Pobieranie z GitHuba zaktualizowanych plików na komputer lokalny: 
-
-git init
-git pull
 

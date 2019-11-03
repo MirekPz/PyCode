@@ -10,3 +10,10 @@ lub
   
   git clone https://github.com/MirekPz/PyCode.git
 
+=============
+
+Pobieranie z GitHuba zaktualizowanych plików na komputer lokalny: 
+
+git init
+git pull
+
