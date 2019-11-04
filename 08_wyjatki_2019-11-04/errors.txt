@@ -1,0 +1,6 @@
+could not convert string to float: 'hello'
+could not convert string to float: ' 2 1'
+could not convert string to float: ' 3 jjj'
+could not convert string to float: ' hho'
+could not convert string to float: 'jk'
+could not convert string to float: 's'
