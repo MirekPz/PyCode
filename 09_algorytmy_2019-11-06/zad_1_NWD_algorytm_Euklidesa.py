@@ -15,10 +15,18 @@ while not is_number:
     except KeyboardInterrupt:
         print("\n\nWciśnięto niewłaściwą kombinację klawiszy! Wpisz raz jeszcze poprawne liczby.")
 
+number_1 = a
+number_2 = b
 
-## dokończyć..
-
+while a != b:
+    if a > b:
+        difference = a - b
+        a = b
+        b = difference
+    else:
+        difference = b - a
+        b = a
+        a = difference
 
 if a == b:
-    print(f"\nNWD liczb {a} i {b} to: {a}")
-
+    print(f"\nNWD liczb {number_1} i {number_2} to: {a}")
