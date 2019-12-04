@@ -1,0 +1,17 @@
+http://www.trytoprogram.com/python-programming/python-built-in-functions/next/
+
+
+=================================
+
+Python next() Syntax
+
+next(iterator[, default])
+
+next() method takes two arguments.
+
+    iterator (required) – the iterator from which next item is to returned
+    default (optional) – value to be returned of iterator is exhausted else StopIteration error is raised
+
+The next() method keeps on returning the next time in the iterator till there are no items left in the iterator. When the end of an iterator is reached, program searches for the default value. If a default value is not given for such cases, then it will raise StopIteration error.
+
+next() method internally uses the built-in __next__() module to fetch the next item from the iterator.
