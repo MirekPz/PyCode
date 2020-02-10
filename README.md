@@ -1,4 +1,4 @@
 # PyCode
-kurs CodeMe
+CodeMe
 
 
